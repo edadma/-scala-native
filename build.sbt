@@ -18,3 +18,7 @@ licenses := Seq("ISC" -> url("https://opensource.org/licenses/ISC"))
 homepage := Some(url("https://github.com/edadma/" + name.value))
 
 enablePlugins(ScalaNativePlugin)
+
+libraryDependencies += "com.lihaoyi" %%% "utest" % "0.7.1" % "test"
+
+testFrameworks += new TestFramework( "utest.runner.Framework" )
