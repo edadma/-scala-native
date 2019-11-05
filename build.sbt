@@ -30,3 +30,22 @@ testFrameworks += new TestFramework( "utest.runner.Framework" )
 libraryDependencies ++= Seq(
   "com.github.scopt" %%% "scopt" % "3.7.0"
 )
+
+publishMavenStyle := true
+
+publishArtifact in Test := false
+
+pomIncludeRepository := { _ => false }
+
+pomExtra :=
+  <scm>
+    <url>git@github.com:edadma/{name.value}.git</url>
+    <connection>scm:git:git@github.com:edadma/{name.value}.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>edadma</id>
+      <name>Edward A. Maxedon, Sr.</name>
+      <url>https://github.com/edadma</url>
+    </developer>
+  </developers>
