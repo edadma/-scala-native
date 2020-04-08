@@ -4,6 +4,8 @@ version := "0.1.0"
 
 scalaVersion := "2.11.12"
 
+enablePlugins(ScalaNativePlugin)
+
 nativeLinkStubs := true
 
 nativeMode := "debug"
@@ -22,14 +24,12 @@ licenses := Seq("ISC" -> url("https://opensource.org/licenses/ISC"))
 
 homepage := Some(url("https://github.com/edadma/" + name.value))
 
-enablePlugins(ScalaNativePlugin)
-
 libraryDependencies += "com.lihaoyi" %%% "utest" % "0.7.1" % "test"
 
 testFrameworks += new TestFramework( "utest.runner.Framework" )
 
 libraryDependencies ++= Seq(
-  "com.github.scopt" %%% "scopt" % "3.7.0"
+  "com.github.scopt" %%% "scopt" % "3.7.1"
 )
 
 publishMavenStyle := true
